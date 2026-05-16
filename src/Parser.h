@@ -4,7 +4,7 @@
 #include "Command.h"
 
 class Parser {
-public:
+public: //принимаем строку
     static std::vector<Command*> parse(
         const std::string& line);
 };
