@@ -1,3 +1,4 @@
+//писать итог команды
 #pragma once
 #include "Command.h"
 #include <iostream>
