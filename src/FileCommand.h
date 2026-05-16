@@ -4,19 +4,19 @@
 
 class FileCommand : public Command {
 private:
-    std::string filename;
-    std::string text;
+    std::string filename; //здесь имя файла
+    std::string text; // тут его содержимое
 
-public:
+public: //конструктор
     FileCommand(const std::string& file,
                 const std::string& txt)
-        : filename(file), text(txt) {}
+        : filename(file), text(txt) {} //кладу значение сюда 
 
-    void execute() override {
-        std::ofstream out(filename, std::ios::app);
+    void execute() override {           //перезапись
+        std::ofstream out(filename, std::ios::app); // std::ios::app - запись в конец
 
         if (out.is_open()) {
-            out << text << std::endl;
+            out << text << std::endl; //ofstream работа с файлами
         }
     }
 };
