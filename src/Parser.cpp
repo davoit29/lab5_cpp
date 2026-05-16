@@ -15,7 +15,7 @@ std::vector<Command*> Parser::parse(
 
     std::string cmd;
 
-    while (ss >> cmd) {
+    while (ss >> cmd) { // записать в cmd  из ss слово
 
         if (cmd == "PRINT") {
 
